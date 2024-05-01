@@ -1,0 +1,105 @@
+﻿/* Define variables de color para mantener la consistencia */
+:root {
+    --color-primary: #000000; /* Negro para el texto */
+    --color-bg-dark: #edf7ff; /* Azul muy claro para el fondo */
+    --color-bg-light: rgba(255, 255, 255, 0.09); /* Fondo transparente para la tabla */
+    --color-accent: #00447dff; /* Azul oscuro para botones y enlaces */
+    --color-border: rgba(44, 41, 41, 0.16); /* Gris oscuro semi-transparente para bordes de la tabla */
+    --blur-effect: 8px; /* Radio de desenfoque para el efecto blur */
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    padding: 30px;
+}
+
+.contacts-panel {
+    background-color: var(--color-bg-dark);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.panel-heading {
+    background-color: var(--color-bg-dark);
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+    .panel-heading h4 {
+        margin: 0;
+        color: var(--color-primary);
+    }
+
+.panel-body {
+    padding: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+}
+
+    .btn:hover {
+        background-color: var(--color-accent);
+    }
+.btn-danger:hover {
+    background-color: #b21919; /* Cambia el fondo a rojo en el hover */
+    color: white; /* Cambia el texto a blanco para mejor contraste */
+}
+.btn-new:hover {
+    background-color: #000000; /* Cambia el fondo a azul para "Crear Nuevo" */
+    color: white; /* Asegura que el texto sea blanco para mejor contraste */
+}
+
+
+.table-container {
+    overflow-x: auto;
+    backdrop-filter: blur(var(--blur-effect));
+    background-color: var(--color-bg-light);
+    border-radius: 8px;
+    border: 0px solid var(--color-border);
+    table-layout: fixed;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .contacts-table thead {
+        background-color: transparent;
+        color: var(--color-primary);
+    }
+
+    .contacts-table th,
+    .contacts-table td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .contacts-table tr:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+.form-inline .form-control {
+    margin-right: .5rem; /* Espacio entre el input y el botón */
+    margin-bottom: 0; /* Remueve el margen inferior por defecto */
+}
+
+.form-inline button {
+    vertical-align: middle; /* Alinea verticalmente el botón con el campo de texto */
+}
